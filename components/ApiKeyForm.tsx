@@ -16,16 +16,20 @@ const ApiKeyForm: React.FC<ApiKeyFormProps> = ({ onApiKeySubmit }) => {
 
     return (
         <View className='flex-1 justify-center items-center'>
+            <Text className='text-white'>Welcome to natural-chat!</Text>
+
             <View className='w-full px-4'>
                 <TextInput
-                    className='border border-gray-300 p-2 rounded'
+                    className=' p-2 rounded text-white placeholder:text-gray-300'
                     placeholder="Enter OpenAI API Key"
                     onChangeText={setApiKey}
                     value={apiKey}
+                    placeholderTextColor="#9CA3AF"
+                    autoFocus
                 />
             </View>
             <TouchableOpacity
-                className='bg-blue-500 p-3 rounded mt-4'
+                className='bg-teal-950 p-3 rounded mt-4'
                 onPress={handleSubmit}
             >
                 <Text className='text-white font-bold'>
