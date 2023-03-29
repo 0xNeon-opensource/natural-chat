@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ApiKeyForm from './components/ApiKeyForm';
+import Chat from './components/Chat';
 import getStringFromStorage from './lib/storage/getStringFromStorage';
 
 export default function App() {
@@ -21,11 +22,13 @@ export default function App() {
     });
   }, []);
   return (
-    <View className="flex-1 items-center justify-center bg-teal-900">
+    <View className="flex-1 bg-teal-900">
       {
         hasApiKey === undefined ? (
           <Text className="text-white">Loading...</Text>) :
-          hasApiKey ? (<Text>You got it!</Text>) : <ApiKeyForm onApiKeySubmit={handleApiKeySubmit} />
+          hasApiKey ? (
+            <Chat />
+          ) : <ApiKeyForm onApiKeySubmit={handleApiKeySubmit} />
       }
 
     </View>
