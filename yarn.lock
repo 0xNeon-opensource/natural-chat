@@ -1937,6 +1937,11 @@ abort-controller@^3.0.0:
   dependencies:
     event-target-shim "^5.0.0"
 
+abortcontroller-polyfill@^1.7.3:
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/abortcontroller-polyfill/-/abortcontroller-polyfill-1.7.5.tgz#6738495f4e901fbb57b6c0611d0c75f76c485bed"
+  integrity sha512-JMJ5soJWP18htbbxJjG7bG6yuI6pRhgJ0scHHTfkUjf6wjP912xZWvM+A4sJK3gqd9E8fcPbDnOefbA9Th/FIQ==
+
 absolute-path@^0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/absolute-path/-/absolute-path-0.0.0.tgz#a78762fbdadfb5297be99b15d35a785b2f095bf7"
@@ -2249,6 +2254,11 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+base-64@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/base-64/-/base-64-0.1.0.tgz#780a99c84e7d600260361511c4877613bf24f6bb"
+  integrity sha512-Y5gU45svrR5tI2Vt/X9GPd3L0HNIKzGu202EjxrXMpuc2V2CiKgemAbUUsqYmZJvPtCXoUKjNZwBJzsNScUbXA==
 
 base64-js@^1.1.2, base64-js@^1.2.3, base64-js@^1.3.1, base64-js@^1.5.1:
   version "1.5.1"
@@ -3294,6 +3304,11 @@ expo-asset@~8.9.1:
     path-browserify "^1.0.0"
     url-parse "^1.5.9"
 
+expo-av@~13.2.1:
+  version "13.2.1"
+  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-13.2.1.tgz#ce502a4c5d4a57962fd9f5f1a40c76c39c88f5ee"
+  integrity sha512-mC0mYSzaOaZgXjzhW2l4Ag325JjH6q5IbptfwD7gkMOFYy7VPOMxEMUnetadbs3DDzmgE6vUWrTjUIUbwq59qg==
+
 expo-constants@~14.2.0, expo-constants@~14.2.1:
   version "14.2.1"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-14.2.1.tgz#b5b6b8079d2082c31ccf2cbc7cf97a0e83c229c3"
@@ -3716,6 +3731,18 @@ glob-parent@^6.0.2:
   integrity sha512-XxwI8EOhVQgWp6iDL+3b0r86f4d6AX6zSU55HfB4ydCEuXLXc5FcYeOu+nnGftS4TEju/11rt4KJPTMgbfmv4A==
   dependencies:
     is-glob "^4.0.3"
+
+glob@7.0.6:
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.0.6.tgz#211bafaf49e525b8cd93260d14ab136152b3f57a"
+  integrity sha512-f8c0rE8JiCxpa52kWPAOa3ZaYEnzofDzCQLCn3Vdk0Z5OVLq3BsRFJI4S4ykpeVW6QMGBUkMeUpoEgWnMTnw5Q==
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.2"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
 
 glob@7.1.6:
   version "7.1.6"
@@ -5875,7 +5902,7 @@ prompts@^2.3.2, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@*, prop-types@^15.7.x:
+prop-types@*, prop-types@^15.6.1, prop-types@^15.7.x:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -5984,6 +6011,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-native-base64@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-base64/-/react-native-base64-0.2.1.tgz#3d0e73a649c4c0129f7b7695d3912456aebae847"
+  integrity sha512-eHgt/MA8y5ZF0aHfZ1aTPcIkDWxza9AaEk4GcpIX+ZYfZ04RcaNahO+527KR7J44/mD3efYfM23O2C1N44ByWA==
+
 react-native-chatgpt@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/react-native-chatgpt/-/react-native-chatgpt-0.9.0.tgz#99c5898465d4c2c3e760304424a2149911be59ec"
@@ -6007,6 +6039,22 @@ react-native-communications@2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-native-communications/-/react-native-communications-2.2.1.tgz#7883b56b20a002eeb790c113f8616ea8692ca795"
   integrity sha512-5+C0X9mopI0+qxyQHzOPEi5v5rxNBQjxydPPiKMQSlX1RBIcJ8uTcqUPssQ9Mo8p6c1IKIWJUSqCj4jAmD0qVQ==
+
+react-native-fetch-blob@^0.10.8:
+  version "0.10.8"
+  resolved "https://registry.yarnpkg.com/react-native-fetch-blob/-/react-native-fetch-blob-0.10.8.tgz#4fc256abae0cb5f10e7c41f28c11b3ff330d72a9"
+  integrity sha512-+zE/VjBO9HTjqNXL1KgtgS3ZTH8CNuxg9rJDml+GsO1UbIe4EgdRiCy/sIV9X8lVYimKfep8iJsVMTsjJvQHmA==
+  dependencies:
+    base-64 "0.1.0"
+    glob "7.0.6"
+
+react-native-fetch@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-fetch/-/react-native-fetch-2.0.0.tgz#7bae253e4d1c17279c8f09d008c728c465bd14a4"
+  integrity sha512-oahN+dCP7OsagD+cmFXvUjS5erNYcxfPubsEi8ZoERH8YkZqXPG/V0myWNJCdkK4Gi1w0lWjLhK0yTfjF8PPYQ==
+  dependencies:
+    prop-types "^15.6.1"
+    tenacious-fetch "^2.0.0"
 
 react-native-gifted-chat@^2.0.1:
   version "2.0.1"
@@ -6404,6 +6452,14 @@ rimraf@~2.6.2:
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
   dependencies:
     glob "^7.1.3"
+
+rn-fetch-blob@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/rn-fetch-blob/-/rn-fetch-blob-0.12.0.tgz#ec610d2f9b3f1065556b58ab9c106eeb256f3cba"
+  integrity sha512-+QnR7AsJ14zqpVVUbzbtAjq0iI8c9tCg49tIoKO2ezjzRunN7YL6zFSFSWZm6d+mE/l9r+OeDM3jmb2tBb2WbA==
+  dependencies:
+    base-64 "0.1.0"
+    glob "7.0.6"
 
 run-parallel@^1.1.9:
   version "1.2.0"
@@ -6981,6 +7037,14 @@ tempy@^0.7.1:
     type-fest "^0.16.0"
     unique-string "^2.0.0"
 
+tenacious-fetch@^2.0.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tenacious-fetch/-/tenacious-fetch-2.3.1.tgz#459293b36bb6001142abd1784d95a7c747e4b563"
+  integrity sha512-POKK6c124yrVjKlwB3Ky9obkfP4tZHjTo8r7OVEYEwJCTeWoGfkfRuTU5Gt+yBgoSq7XUwsB8kyi7UQmsACYyQ==
+  dependencies:
+    abortcontroller-polyfill "^1.7.3"
+    whatwg-fetch "^3.6.2"
+
 terminal-link@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/terminal-link/-/terminal-link-2.1.1.tgz#14a64a27ab3c0df933ea546fba55f2d078edc994"
@@ -7367,7 +7431,7 @@ webidl-conversions@^3.0.0:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
   integrity sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==
 
-whatwg-fetch@^3.0.0:
+whatwg-fetch@^3.0.0, whatwg-fetch@^3.6.2:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
   integrity sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==

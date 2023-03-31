@@ -1,5 +1,5 @@
 import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from 'openai';
-import getStringFromStorage from './getStringFromStorage';
+import getStringFromStorage from '../storage/getStringFromStorage';
 
 
 const helloGpt = async () => {

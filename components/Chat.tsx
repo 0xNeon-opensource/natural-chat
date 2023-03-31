@@ -3,8 +3,13 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { GiftedChat, IMessage } from 'react-native-gifted-chat';
 import { useChatGpt } from 'react-native-chatgpt';
 import { Snackbar } from 'react-native-paper';
-import { Dimensions, StyleSheet, View } from 'react-native';
+import { Dimensions, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { MicrophoneIcon } from 'react-native-heroicons/outline';
+import { startRecording, stopRecording } from '../lib/recording';
+import { transcribeAudio } from '../lib/whisper';
+import getStringFromStorage from '../lib/storage/getStringFromStorage';
+import { Audio } from 'expo-av';
 
 const CHAT_GPT_THUMBNAIL_URL =
     'https://styles.redditmedia.com/t5_7hqomg/styles/communityIcon_yyc98alroh5a1.jpg?width=256&s=cb48e1046acd79d1cc52b59b34ae56b0c1a9b4b8';
@@ -30,6 +35,9 @@ const Chat = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const messageId = useRef('');
     const conversationId = useRef('');
+    const [recording, setRecording] = useState<Audio.Recording | null>(null); // Add a state to manage the recording object
+
+    const [isRecording, setIsRecording] = useState(false); // Add a state to manage recording status
 
     useEffect(() => {
         setMessages([createBotMessage('Ask me anything :)')]);
@@ -97,6 +105,27 @@ const Chat = () => {
         );
     }, []);
 
+    // Implement the onPress event for the microphone icon
+    const handlePressMicrophone = async () => {
+        const apiKey = await getStringFromStorage('apiKey');
+        if (!isRecording) {
+            setIsRecording(true);
+            const newRecording = await startRecording();
+            setRecording(newRecording); // Save the recording object
+        } else {
+            setIsRecording(false);
+            if (recording) {
+                const audioUri = await stopRecording(recording); // Pass the recording object
+
+                if (audioUri) {
+                    const transcribedText = await transcribeAudio(audioUri, apiKey); // Transcribe the audio using Whisper
+                    if (transcribedText) {
+                        onSend([{ _id: Date.now(), text: transcribedText, createdAt: new Date(), user: { _id: 1 } }]);
+                    }
+                }
+            }
+        }
+    };
     return (
         <View style={styles.container}>
             <GiftedChat
@@ -105,6 +134,16 @@ const Chat = () => {
                 user={{
                     _id: 1,
                 }}
+                renderInputToolbar={() => (
+                    <View style={styles.microphoneContainer}>
+                        <TouchableOpacity onPress={handlePressMicrophone}>
+                            <MicrophoneIcon
+                                size={48}
+                                color={isRecording ? 'red' : 'black'}
+                            />
+                        </TouchableOpacity>
+                    </View>
+                )}
             />
             <Snackbar
                 visible={!!errorMessage}
@@ -130,6 +169,12 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 0,
         right: 0,
+    },
+    microphoneContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 10,
     },
 });
 

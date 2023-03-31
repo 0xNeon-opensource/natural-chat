@@ -28,14 +28,13 @@ export default function App() {
     <SafeAreaProvider>
       <ChatGptProvider>
         <View className="flex-1 bg-teal-900">
-          <Navigator />
-          {/* {
+          {
             hasApiKey === undefined ? (
               <Text className="text-white">Loading...</Text>) :
               hasApiKey ? (
-                <Chat />
+                <Navigator />
               ) : <ApiKeyForm onApiKeySubmit={handleApiKeySubmit} />
-          } */}
+          }
         </View>
       </ChatGptProvider>
     </SafeAreaProvider>
